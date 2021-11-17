@@ -1,0 +1,24 @@
+  <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE auteurs SYSTEM "C:\Users\Etudiant\Desktop\xml_TPs\TP2\EX1\q3.dtd">
+<auteurs>
+	<auteur>
+		 <nom type="Mlle"> Bouleb </nom>
+		 <prenom> Sarah </prenom>
+		 <adresse>
+			 <rue> N°20 rue 541</rue>
+			 <ville> Agadir </ville>
+			 <codepostal> 80000 </codepostal>
+		 </adresse>
+		 <tel GSM="0600371577" DOM="0528233086"/>
+	</auteur>
+	<auteur>
+		 <nom type="Mr"> JAHED </nom>
+		 <prenom> Abdellah </prenom>
+		 <adresse>
+			 <rue> N°20 Bouargane</rue>
+			 <ville> Agadir </ville>
+		 </adresse>
+		 <tel DOM="0528233086"/>
+		 <tel DOM="0524166105"/>
+	</auteur>
+</auteurs> 
