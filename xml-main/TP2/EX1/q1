@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT image EMPTY>
+<!ATTLIST image 
+	alt CDATA #IMPLIED 
+	src CDATA #REQUIRED>
+<!ENTITY source SYSTEM "logo.gif" NDATA gif>
+<!NOTATION gif SYSTEM "image/gif">

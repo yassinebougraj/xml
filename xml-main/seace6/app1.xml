@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element  name="memo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="to" type="xs:string"/>
+				<xs:element name="from" type="xs:string"/>
+				<xs:element name="date" type="xs:date"/>
+				<xs:element ref="body"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="body">
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="jour"/>
+				<xs:element ref="heure"/>
+				<xs:element name="lieu" type="xs:string"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="jour">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="lundi"/>
+				<xs:enumeration value="mardi"/>
+				<xs:enumeration value="mercredi"/>
+				<xs:enumeration value="jeudi"/>
+				<xs:enumeration value="vendredi"/>
+				<xs:enumeration value="samedi"/>
+				<xs:enumeration value="dimanche"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="heure">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="([0-1][0-9]h|2[0-4]h)"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+</xs:schema>

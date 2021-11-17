@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="jour">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:minInclusive value="1"/>
+				<xs:maxInclusive value="31"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="heure">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="([0-1][0-9]h|2[0-4]h)"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="jour_de_semaine">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="lundi"/>
+				<xs:enumeration value="mardi"/>
+				<xs:enumeration value="mercredi"/>
+				<xs:enumeration value="jeudi"/>
+				<xs:enumeration value="vendredi"/>
+				<xs:enumeration value="samedi"/>
+				<xs:enumeration value="dimanche"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="date-de-naissance">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="([0-2][1-9]|10|20|3[0-1])\-(0[1-9]|1[0-2])\-([0-9]{4})"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="date-de-naissance_moi">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="([0-2][1-9]|10|20|3[0-1])\-(jan|fev|mar|avril|mai|jun|jui|aou|sep|oct|nov|dec)\-([0-9]{4})"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="mot-de-passe">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="([A-Z].{8}[#$!-])"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="menus">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="menu" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="menu">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="entree"/>
+				<xs:element ref="plat"/>
+				<xs:element name="dessert"/>
+			</xs:sequence>
+			<xs:attribute name="jour" type="jourType" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType  name="jourType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="lundi"/>
+			<xs:enumeration value="mardi"/>
+			<xs:enumeration value="mercredi"/>
+			<xs:enumeration value="jeudi"/>
+			<xs:enumeration value="vendredi"/>
+			<xs:enumeration value="samedi"/>
+			<xs:enumeration value="dimanche"/>
+		</xs:restriction>
+	</xs:simpleType>
+		<xs:element name="plat">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="viande" type="xs:string" maxOccurs="unbounded"/>
+				<xs:element name="legume" type="xs:string"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="serie_manga">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="titre" type="xs:string"/>
+				<xs:element ref="mangas"/>
+				<xs:element ref="personnes"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="personnes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="personne" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="personne">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nom" type="xs:string"/>
+				<xs:element name="prenom" type="xs:string"/>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:ID" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="mangas">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="manga" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="manga">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="auteur"/>
+				<xs:element ref="ullistrateur"/>
+				<xs:element name="resume" type="xs:string"/>
+				<xs:element name="date_sortie" type="xs:date"/>
+				<xs:element name="cover">
+					<xs:complexType>
+						<xs:attribute name="src" type="xs:ENTITY" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="nimero_serie" type="xs:ID" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="auteur">
+		<xs:complexType>
+			<xs:attribute name="ref" type="xs:IDREF" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ullistrateur">
+		<xs:complexType>
+			<xs:attribute name="ref" type="xs:IDREF" use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

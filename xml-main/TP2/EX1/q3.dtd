@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT auteurs (auteur+) >
+<!ELEMENT auteur (nom,prenom,adresse,tel+)>
+<!ELEMENT nom (#PCDATA)>
+<!ATTLIST nom type CDATA #REQUIRED>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT tel EMPTY>
+<!ATTLIST tel 
+	GSM CDATA #IMPLIED
+	DOM CDATA #REQUIRED
+>
+<!ELEMENT adresse (rue , ville , codepostal?)>
+<!ELEMENT rue (#PCDATA)>
+<!ELEMENT ville (#PCDATA)>
+<!ELEMENT codepostal (#PCDATA)>
+

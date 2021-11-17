@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT serie_manga (titre ,magas , persones)>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT persones (persone+)>
+<!ELEMENT persone (nom , prenom)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT prenom (#PCDATA)>
+<!ATTLIST persone id ID #REQUIRED>
+<!ELEMENT magas (manga+)>
+<!ELEMENT manga (auteur+ , ullistreateur , resume , date_sortie , cover , sous_titre)>
+<!ELEMENT auteur EMPTY>
+<!ATTLIST auteur ref IDREF #REQUIRED>
+<!ELEMENT ullistreateur EMPTY>
+<!ATTLIST ullistreateur ref IDREF #REQUIRED>
+<!ELEMENT resume (#PCDATA)>
+<!ELEMENT date_sortie (#PCDATA)>
+<!ELEMENT sous_titre (#PCDATA)>
+<!ATTLIST cover src ENTITY #REQUIRED>
+<!ENTITY image SYSTEM "image.gif" NDATA gif>
+<!NOTATION gif SYSTEM "gif_viewer">
+<!ATTLIST manga numero_serie ID #REQUIRED>
+ 
