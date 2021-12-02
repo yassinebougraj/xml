@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="C:\Users\Etudiant\Downloads\tp4.xsl"?>
+<etudiants>
+	<iut id="123">
+		<nom>lemaine</nom>
+		<uv>
+			<numuv>PHP</numuv>
+			<dureeuv>4 semaine</dureeuv>
+			<noteuv>14</noteuv>
+		</uv>
+		<uv>
+			<numuv>mysql</numuv>
+			<dureeuv>6 semaine</dureeuv>
+			<noteuv>16</noteuv>
+		</uv>
+		<uv>
+			<numuv>mobile</numuv>
+			<dureeuv>12 semaine</dureeuv>
+			<noteuv>14</noteuv>
+		</uv>
+	</iut>
+	<iut id="345">
+		<nom>legros</nom>
+		<uv>
+			<numuv>PHP</numuv>
+			<dureeuv>4 semaine</dureeuv>
+			<noteuv>11</noteuv>
+		</uv>
+		<uv>
+			<numuv>mysql</numuv>
+			<dureeuv>6 semaine</dureeuv>
+			<noteuv>13</noteuv>
+		</uv>
+		<uv>
+			<numuv>mobile</numuv>
+			<dureeuv>12 semaine</dureeuv>
+			<noteuv>10</noteuv>
+		</uv>
+	</iut>
+</etudiants>
