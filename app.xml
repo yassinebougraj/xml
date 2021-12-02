@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="app.css"?>
+<racine>
+<enfant>
+<nom>Anass</nom>
+<lien>Garçon</lien>
+<date>05/10/1989</date>
+<data> Master</data>
+</enfant>
+<enfant>
+<nom>Malak</nom>
+<lien>Fille</lien>
+<date>31/05/1988</date>
+<data> licence</data>
+</enfant>
+</racine>

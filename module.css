@@ -1,0 +1,47 @@
+*{
+text-align:center;
+}
+titre
+{
+	background-color: green;
+	color:white;
+	font-size:20px;
+	font-family: "Times New Roman", Times, serif;
+	width: 100%;
+font-weight: bold;
+}
+nom
+{
+	width: 100%;
+font-weight: bold;
+	text-decoration:underline;
+	color:green;
+	font-size:15px;
+	text-align:center;
+}	
+sujet1
+{
+color:green;
+	width: 100%;
+}
+sujet2
+{
+	width: 100%;
+color:pink;
+}
+sujet3
+{
+	width: 100%;
+color:blue;
+}
+sujet4
+{
+	width: 100%;
+color:yellow;
+}
+section
+{
+
+margin-top: 25px;
+background-color: gray;
+}

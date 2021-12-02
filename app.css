@@ -1,0 +1,27 @@
+racine
+{
+background-image: url("er.jpg");
+}
+nom
+{
+	background-color:blue;
+	color: white;
+	display:block;
+	font-weight:bold;	
+}
+lien
+{
+color: black;
+	display:block;
+}
+date
+{
+color: black;
+	display:block;
+}
+data
+{
+font-weight:bold;
+color: black;
+	display:block;
+}

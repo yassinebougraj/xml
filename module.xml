@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="module.css"?>
+<Module>
+<br></br>
+	<titre> Algorithmique</titre>
+	<section>
+		<br></br>
+		<nom>Algo</nom>
+		<br></br>
+		<sujet1>Greedy Algo</sujet1>
+		<br></br>
+		<sujet2>Randomised Algo</sujet2>
+		<br></br>
+		<sujet3>Searching Algo</sujet3>
+		<br></br>
+		<sujet4>Sorting Algo</sujet4>
+		<br></br>
+	</section>
+	
+	<section>
+	
+		<nom>Data Structures</nom>
+		<br></br>
+		<sujet1>Array</sujet1>
+		<br></br>
+		<sujet2>Stack</sujet2>
+		<br></br>
+		<sujet3>Queue</sujet3>
+		<br></br>
+		<sujet4>Linked List</sujet4>
+	</section>
+</Module>
