@@ -1,3 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions">
+	
 <xsl:template match="/">
 <h2 style="color :red">question 1</h2>
 <xsl:for-each select="//categorie[@type='roman']/livre[pages &gt;=400]">
@@ -12,3 +15,74 @@
 <span style="font-style:italic">prix :</span>
 <xsl:value-of select="prix"/><br/>
 <br/>
+</xsl:for-each>
+<h2 style="color :red">question 2</h2>
+<xsl:for-each select="//categorie/livre[3][prix &gt;=10]">
+<span style="font-style:italic">Titre :</span>
+<xsl:value-of select="titre"/> <br/>
+<span style="font-style:italic">Auteur :</span>
+<xsl:value-of select="auteur"/><br/>
+<span style="font-style:italic">copyright :</span>
+<xsl:value-of select="copyright"/><br/>
+<span style="font-style:italic">pages :</span>
+<xsl:value-of select="pages"/><br/>
+<span style="font-style:italic">prix :</span>
+<xsl:value-of select="prix"/><br/>
+<br/>
+</xsl:for-each>
+
+
+<h2 style="color :red">question 3</h2>
+<xsl:for-each select="//categorie[@type='roman']/livre[prix &gt;=12]">
+<span style="font-style:italic">Titre :</span>
+<xsl:value-of select="titre"/> <br/>
+<span style="font-style:italic">Auteur :</span>
+<xsl:value-of select="auteur"/><br/>
+<span style="font-style:italic">copyright :</span>
+<xsl:value-of select="copyright"/><br/>
+<span style="font-style:italic">pages :</span>
+<xsl:value-of select="pages"/><br/>
+<span style="font-style:italic">prix :</span>
+<xsl:value-of select="prix"/><br/>
+<br/>
+</xsl:for-each>
+
+
+<h2 style="color :red">question 4</h2>
+<xsl:for-each select="//categorie/livre[3][pages &gt;=300]">
+<span style="font-style:italic">Titre :</span>
+<xsl:value-of select="titre"/> <br/>
+<span style="font-style:italic">Auteur :</span>
+<xsl:value-of select="auteur"/><br/>
+<span style="font-style:italic">copyright :</span>
+<xsl:value-of select="copyright"/><br/>
+<span style="font-style:italic">pages :</span>
+<xsl:value-of select="pages"/><br/>
+<span style="font-style:italic">prix :</span>
+<xsl:value-of select="prix"/><br/>
+<br/>
+</xsl:for-each>
+
+
+<h2 style="color :red">question 5</h2>
+<xsl:for-each select="//categorie[count(//livre) &gt;=0]">
+<xsl:for-each select="livre[prix &gt;=6]">
+<span style="font-style:italic">Titre :</span>
+<xsl:value-of select="titre"/> <br/>
+<span style="font-style:italic">Auteur :</span>
+<xsl:value-of select="auteur"/><br/>
+<span style="font-style:italic">copyright :</span>
+<xsl:value-of select="copyright"/><br/>
+<span style="font-style:italic">pages :</span>
+<xsl:value-of select="pages"/><br/>
+<span style="font-style:italic">prix :</span>
+<xsl:value-of select="prix"/><br/>
+<br/>
+</xsl:for-each>
+</xsl:for-each>
+
+
+
+
+</xsl:template>
+</xsl:stylesheet>
