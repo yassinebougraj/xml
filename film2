@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions">
+	
+<xsl:template match="/">
+<h2 style="color :red">question 1</h2>
+<xsl:for-each select="//FILMS/FILM">
+<span style="font-style:italic">TITRE :</span>
+<xsl:value-of select="TITRE"/> <br/>
+
+	</xsl:for-each>
+
+
+	<h2 style="color :red">question 2</h2>
+
+<span style="font-style:italic">nombre de film :<xsl:value-of select="count(//FILM[TITRE='Alien'])"/> </span>
+<br/>
+<xsl:for-each select="//FILMS/FILM[TITRE='Alien']">
+<span style="font-style:italic">TITRE :</span>
+<xsl:value-of select="TITRE"/> <br/>
+
+	</xsl:for-each>
+	
+	<h2 style="color :red">question 3</h2>
+<span style="font-style:italic">INTITULE :
+<xsl:value-of select="//FILM[TITRE='Reservoir dogs']/ROLES/ROLE[NOM='Keitel' and PRENOM='Harvey']/INTITULE "/> 
+</span>
+
+<br/>
+
+
+
+	<h2 style="color :red">question 4</h2>
+	<ul>
+		
+	
+	<xsl:for-each select="/FILMS/FILM[last()]">
+<li style="font-style:italic">TITRE :
+<xsl:value-of select="TITRE"/></li> <br/>
+<li style="font-style:italic">GENRE :
+<xsl:value-of select="GENRE"/> </li><br/>
+<li style="font-style:italic">PAYS :
+<xsl:value-of select="PAYS"/> </li><br/>
+<li style="font-style:italic">Annee:
+<xsl:value-of select="@Annee"/> </li><br/>
+<li style="font-style:italic">Nombre de Roles
+<xsl:value-of select="count(ROLES/ROLE)"/> </li><br/>
+
+	</xsl:for-each>
+</ul>
+	
+	<h2 style="color :red">question 5</h2>
+
+<span style="font-style:italic">nombre :</span>
+<xsl:value-of select="count(//FILM)"/> <br/>
+
+
+		<h2 style="color :red">question 6</h2>
+			<table border="1">
+				<tbody>
+					<tr>
+						<th>Titre</th>
+						<th>Genre</th>
+						<th>Pays</th>
+						<th>Annee</th>
+						<th>Nombre</th>
+					</tr>
+					<xsl:for-each select="//FILM">
+										<tr>
+					<td><xsl:value-of select="TITRE"/></td>
+					<td><xsl:value-of select="GENRE"/></td>
+					<td><xsl:value-of select="PAYS"/></td>
+					<td><xsl:value-of select="@Annee"/></td>
+						<td><xsl:value-of select="count(ROLES/ROLE)"/></td>
+					</tr>
+					</xsl:for-each>
+				</tbody>
+			</table>
+	
+	
+	
+	</xsl:template>
+</xsl:stylesheet>
