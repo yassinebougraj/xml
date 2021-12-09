@@ -78,5 +78,25 @@
 	
 	
 	
+		<h2 style="color :red">question 7</h2>
+	<ul>
+		
+	
+	<xsl:for-each select="//FILM/ROLES/ROLE">
+<li style="font-style:italic">TITRE :
+<xsl:value-of select="../../TITRE"/></li> <br/>
+<ul>
+
+
+<li style="font-style:italic">NOM :
+<xsl:value-of select="NOM"/> </li><br/>
+<li style="font-style:italic">PRENOM :
+<xsl:value-of select="PRENOM"/> </li><br/>
+<li style="font-style:italic">Intitule :
+<xsl:value-of select="INTITULE"/> </li><br/>
+</ul>
+	</xsl:for-each>
+</ul>
+	
 	</xsl:template>
 </xsl:stylesheet>
