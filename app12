@@ -1,0 +1,14 @@
+<xsl:template match="/">
+<h2 style="color :red">question 1</h2>
+<xsl:for-each select="//categorie[@type='roman']/livre[pages &gt;=400]">
+<span style="font-style:italic">Titre :</span>
+<xsl:value-of select="titre"/> <br/>
+<span style="font-style:italic">Auteur :</span>
+<xsl:value-of select="auteur"/><br/>
+<span style="font-style:italic">copyright :</span>
+<xsl:value-of select="copyright"/><br/>
+<span style="font-style:italic">pages :</span>
+<xsl:value-of select="pages"/><br/>
+<span style="font-style:italic">prix :</span>
+<xsl:value-of select="prix"/><br/>
+<br/>
