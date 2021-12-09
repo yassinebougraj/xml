@@ -97,6 +97,22 @@
 <br/>
 </xsl:for-each>
 
-
+<h2 style="color :red">question 6</h2>
+<xsl:for-each select="//categorie[not(contains(@type,'enfant'))]/livre">
+<span style="font-style:italic">Titre :</span>
+<xsl:value-of select="titre"/> <br/>
+<span style="font-style:italic">Auteur :</span>
+<xsl:value-of select="auteur"/><br/>
+<span style="font-style:italic">copyright :</span>
+<xsl:value-of select="copyright"/><br/>
+<span style="font-style:italic">pages :</span>
+<xsl:value-of select="pages"/><br/>
+<span style="font-style:italic">prix :</span>
+<xsl:value-of select="prix"/><br/>
+<br/>
+</xsl:for-each>
+	
+	
+	
 </xsl:template>
 </xsl:stylesheet>
