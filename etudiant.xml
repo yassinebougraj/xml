@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?altova_xslfo C:\Users\Etudiant\Desktop\page.xsl?>
+<univr>
+	<etudiant>
+		<nom> Etudiant 1</nom>
+		<cours id="1" note="12"/>
+		<cours id="2" note="09"/>
+		<cours id="3" note="13"/>
+		<cours id="4" note="10"/>
+	</etudiant>
+	<etudiant>
+		<nom>Etudiant 2</nom>
+		<cours id="1" note="15"/>
+		<cours id="2" note="12"/>
+		<cours id="3" note="13"/>
+	</etudiant>
+	<etudiant>
+		<nom> Etudiant 3 </nom>
+		<cours id="1" note="12"/>
+		<cours id="2" note="12"/>
+		<cours id="3" note="11"/>
+	</etudiant>
+</univr>
