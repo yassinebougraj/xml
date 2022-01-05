@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?altova_xslfo etudiantest.xsl?>
+<univr>
+			<etudiant>
+				<nom id="1445">Yassine Bougraj</nom>
+				<cours nom="Yassine Bougraj" duree="28semaine" note="13"/>
+				<cours nom="Yassine Bougraj" duree="6semain" note="17"/>
+				<cours nom="Yassine Bougraj" duree="12w" note="122"/>
+				<cours nom="Yassine Bougraj" duree="12" note="12"/>
+			</etudiant>
+</univr>
