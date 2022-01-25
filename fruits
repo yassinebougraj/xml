@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions">
+	<xsl:template match="produits">
+	<span style="color:red;font-size:30px;">Test </span><br/>
+	<span style="color:green;font-size:20px;">Question 1 </span>
+		<xsl:for-each select="legume">
+			<ul>
+				<li> <xsl:value-of select="@type"/> </li>
+			</ul>
+		</xsl:for-each>	
+		
+		<span style="color:green;font-size:20px;">Question 2 </span>
+		<p>Nombre de legumes : <xsl:value-of select="count(legume)"/> </p>
+		
+		<span style="color:green;font-size:20px;">Question 3 </span><br/>
+		<xsl:for-each select="fruit">
+			<xsl:sort select="qtity" order="descending"/>
+			<xsl:if test="position() = 1">
+				type : <xsl:value-of select="@type"/><br/>
+				prix : <xsl:value-of select="@prix"/><br/>
+				calibre : <xsl:value-of select="@calibre"/><br/>
+				producteur : <xsl:value-of select="producteur"/><br/>
+				origine : <xsl:value-of select="origine"/><br/>
+				quantité : <xsl:value-of select="qtity"/><br/>
+				note : <xsl:value-of select="note"/><br/>
+				bio : <xsl:value-of select="bio"/><br/>
+			</xsl:if>
+		</xsl:for-each>
+		
+		<span style="color:green;font-size:20px;">Question 4 </span><br/>
+		<table border="2" >
+		<thead>
+			<tr>
+				<th>type</th>
+				<th>prix</th>
+				<th>calibre</th>
+				<th>producteur</th>
+				<th>origine</th>
+				<th>quantité</th>
+				<th>note</th>
+				<th>bio</th>
+			</tr>
+		</thead>
+			<tbody>
+				<xsl:for-each select="legume">
+				<xsl:sort select="@prix" order="descending"/>
+				<tr>
+					<td><xsl:value-of select="@type"/></td>
+					<td><xsl:value-of select="@prix"/></td>
+					<td><xsl:value-of select="@calibre"/></td>
+					<td> <xsl:value-of select="producteur"/></td>
+					<td> <xsl:value-of select="origine"/></td>
+					<td> <xsl:value-of select="qtity"/></td>
+					<td> <xsl:value-of select="note"/></td>
+					<td> <xsl:value-of select="bio"/></td>
+				</tr>
+				</xsl:for-each>
+			</tbody>
+		</table>
+
+	</xsl:template>
+</xsl:stylesheet>
